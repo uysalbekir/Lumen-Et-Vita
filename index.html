@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LUMI</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script src="js/infoscreen.js"></script>
+  	<script src="js/bird.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/hands.js"></script>
+   <script src="js/gestures.js"></script>
+   <script src="js/sketch.js"></script>
+   <script src="js/planets.js"></script>
+</head>
+
+<body>
+  <div class="hand" id="body-0-left-hand"></div>
+  <div class="hand" id="body-0-right-hand"></div>
+  <div class="hand" id="body-1-left-hand"></div>
+  <div class="hand" id="body-1-right-hand"></div>
+  <div class="hand" id="body-2-left-hand"></div>
+  <div class="hand" id="body-2-right-hand"></div>
+  <div class="hand" id="body-3-left-hand"></div>
+  <div class="hand" id="body-3-right-hand"></div>
+  <div class="hand" id="body-4-left-hand"></div>
+  <div class="hand" id="body-4-right-hand"></div>
+  <div class="hand" id="body-5-left-hand"></div>
+  <div class="hand" id="body-5-right-hand"></div>
+
+    <div class="container">
+        <div id="infoBox">
+            <h4 id="bodyCount">bodyCount niet geladen</h4>
+            <h4 id="birdCount">birdCount niet geladen</h4>
+            <h4 id="treeCount">treeCount niet geladen</h4>
+            <h4 id="body-1-left-hand-info">Body 1 - left hand: [x: -] [y: -]</h4>
+            <h4 id="body-1-right-hand-info">Body 1 - right hand: [x: -] [y: -]</h4>
+            <h4 id="body-2-left-hand-info">Body 2 - left hand: [x: -] [y: -]</h4>
+            <h4 id="body-2-right-hand-info">Body 2 - right hand: [x: -] [y: -]</h4>
+            <h4 id="body-3-left-hand-info">Body 3 - left hand: [x: -] [y: -]</h4>
+            <h4 id="body-3-right-hand-info">Body 3 - right hand: [x: -] [y: -]</h4>
+            <h4 id="body-4-left-hand-info">Body 4 - left hand: [x: -] [y: -]</h4>
+            <h4 id="body-4-right-hand-info">Body 4 - right hand: [x: -] [y: -]</h4>
+            <h4 id="body-5-left-hand-info">Body 5 - left hand: [x: -] [y: -]</h4>
+            <h4 id="body-5-right-hand-info">Body 5 - right hand: [x: -] [y: -]</h4>
+            <h4 id="body-6-left-hand-info">Body 6 - left hand: [x: -] [y: -]</h4>
+            <h4 id="body-6-right-hand-info">Body 6 - right hand: [x: -] [y: -]</h4>
+        </div>
+    </div>
+</body>
+
+<script>
+
+$('body').click(function(){
+  // hand.push(new Hand(hand_id, event.pageX, event.pageY));
+  // hand_id = hand_id + 1;
+  // console.log('Click!');
+  // console.log(hand);
+
+  var infoscreen = $('#infoBox');
+
+  if(infoscreen.hasClass('closed')){
+    infoscreen.removeClass('closed');
+  }else{
+    infoscreen.addClass('closed');
+  }
+});
+
+// $(document).mousemove(function(){
+//   for(var i = 0; i < hand.length; i++){
+//      hand[i].reposition(event.pageX, event.pageY);
+//    }
+// });
+
+</script>
+</html>
